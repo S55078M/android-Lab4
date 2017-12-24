@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">APP Netty</string>
+    <string name="jsTitle">JS Безумие:</string>
+    <string name="javascript_code">JavaScript Code</string>
+    <string name="button">Run</string>
+    <string name="result"> </string>
+
+    <string-array name="templates_array">
+        <item>Empty Template</item>
+        <item>2+2</item>
+        <item>String</item>
+        <item>Power</item>
+    </string-array>
+</resources>
