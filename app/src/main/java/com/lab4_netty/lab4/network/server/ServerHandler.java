@@ -13,8 +13,12 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         String message = (String) msg;
-        String result = runCode(messagePreprocessing(message));
-        ctx.writeAndFlush("run() = " + result);
+        try {
+            String result = runCode(messagePreprocessing(message));
+            ctx.writeAndFlush("run() = " + result);
+        } catch (Exception ex) {
+            ctx.writeAndFlush("Incorrect syntax");
+        }
     }
 
     private String runCode(String code) {
